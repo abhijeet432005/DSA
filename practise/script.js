@@ -1,15 +1,18 @@
-let arr = [1, 1, 0, 1, 0, 1, 1, 0, 0]
+let arr = [1, 2, 3, 4, 5]
+let k = 2
 
-let i = 0, j = 0
+reverse(arr, 0, k - 1)
+reverse(arr, k, arr.length - 1)
+reverse(arr, 0, arr.length - 1)
 
-while(j < arr.length){
-    if(arr[j] === 0) {
+function reverse(arr, i, j) {
+    while(i< j) {
         let temp = arr[i]
         arr[i] = arr[j]
         arr[j] = temp
         i++
+        j--
     }
-    j++
 }
 
 console.log(arr)
